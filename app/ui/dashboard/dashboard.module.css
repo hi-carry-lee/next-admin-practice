@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+}
+
+/* about flex:1 and flex:4, it means the .menu occupy 1/(4+1) */
+.menu {
+  flex: 1;
+  background-color: var(--bgSoft);
+  padding: 20px;
+}
+
+.content {
+  flex: 4;
+  padding: 20px;
+}

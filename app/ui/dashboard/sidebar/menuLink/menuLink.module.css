@@ -1,0 +1,15 @@
+.container {
+  /* this is a key css style to form a menu👍 */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* add gap between menu items */
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+.container:hover,
+.active {
+  background-color: #2e374a;
+}

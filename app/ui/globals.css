@@ -1,0 +1,27 @@
+/* :root is a pseudo class selector, it's similar to :hover */
+/* root match the root html element, it has a higher priority */
+/* the variable defined here, we could use it in all the app */
+:root {
+  --bg: #151c2c;
+  --bgSoft: #182237;
+  --text: white;
+  --textSoft: #b7bac1;
+}
+
+/* reset the default style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  /* remove the underline of a tag */
+  text-decoration: none;
+}
