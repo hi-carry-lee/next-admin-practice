@@ -11,6 +11,7 @@ import {
   MdPeople,
   MdOutlineSettings,
   MdHelpCenter,
+  MdLogout,
 } from "react-icons/md";
 
 const menuItems = [
@@ -102,6 +103,11 @@ function Sidebar() {
           </li>
         ))}
       </ul>
+      {/* because the logout button don't belong to menu list, so we put it outside of ul element, and we still want it having the same style as the menu list item, so we acieve it with css */}
+      <div className={styles.logout}>
+        <MdLogout />
+        Logout
+      </div>
     </div>
   );
 }
