@@ -55,7 +55,7 @@
   align-items: center;
   gap: 10px;
   width: max-content;
-  background-color: #5d57c9;
+  background-color: var(--btnPurple);
   color: white;
   border: none;
   border-radius: 5px;

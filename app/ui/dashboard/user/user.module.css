@@ -1,0 +1,20 @@
+.container {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--bgSoft);
+  margin-top: 20px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addButton {
+  background-color: var(--btnPurple);
+  color: var(--text);
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
