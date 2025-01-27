@@ -1,0 +1,43 @@
+.container {
+  background-color: var(--bgSoft);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  /* We have three Card components that we want to stretch across the entire available width. Right now, they're only taking up as much space as their content needs (which is the default behavior of flex items in CSS).*/
+  width: 100%;
+}
+
+.container:hover {
+  background-color: #2e374a;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+}
+
+.number {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.detail {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.positive {
+  color: lime;
+  field-sizing: 15px;
+  font-weight: 500;
+  padding-right: 3px;
+}
+.negative {
+  color: red;
+}
