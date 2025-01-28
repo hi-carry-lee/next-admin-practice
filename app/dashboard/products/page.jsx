@@ -1,5 +1,11 @@
-function Products() {
-  return <div>Products</div>;
+import Products from "../../ui/dashboard/products/products.jsx";
+
+function ProductsPage() {
+  return (
+    <div>
+      <Products />
+    </div>
+  );
 }
 
-export default Products;
+export default ProductsPage;
