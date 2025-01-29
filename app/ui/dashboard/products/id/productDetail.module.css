@@ -1,0 +1,41 @@
+.container {
+  background-color: var(--bgSoft);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+  display: flex;
+}
+
+.infoContainer {
+  flex: 1;
+  font-weight: bold;
+}
+
+.imageContainer {
+  /* width: 45%; */
+  height: 300px;
+  width: 300px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.formContainer {
+  flex: 3;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form input,
+.form textarea,
+.form select {
+  padding: 20px;
+  background-color: var(--bg);
+  color: var(--text);
+  border: 2px solid #2e374a;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}

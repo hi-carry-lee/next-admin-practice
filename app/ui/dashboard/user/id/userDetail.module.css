@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.infoContainer {
+  flex: 1;
+  background-color: var(--bgSoft);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: var(--textSoft);
+  /* why this property? */
+  /* in the flex layout, in the vertical direction, it's stretched by default */
+  height: max-content;
+}
+
+.imageContainer {
+  width: 100%;
+  position: relative;
+  height: 300px;
+  border-radius: 10px;
+  /* to make the radius effective */
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.formContainer {
+  flex: 3;
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--textSoft);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 20px;
+  background-color: var(--bg);
+  color: var(--text);
+  border: 2px solid #2e374a;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.form label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form button {
+  padding: 20px;
+  background-color: teal;
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

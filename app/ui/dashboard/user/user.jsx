@@ -9,7 +9,7 @@ function User() {
     <div className={styles.container}>
       <div className={styles.top}>
         <Search placeholder="Search a new user..." />
-        <Link href="/dashboard/user/add">
+        <Link href="/dashboard/users/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
       </div>

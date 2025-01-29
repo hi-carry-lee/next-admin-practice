@@ -1,9 +1,16 @@
 import React from "react";
+import styles from "../ui/login/login.module.css";
 
 const LoginPage = () => {
   return (
-    <div>
-      <h1>Login</h1>
+    <div className={styles.container}>
+      {/* <h1>Login</h1> */}
+      <form className={styles.form}>
+        <h1>Login</h1>
+        <input type="text" name="username" id="username" />
+        <input type="password" name="password" id="password" />
+        <button>Login</button>
+      </form>
     </div>
   );
 };
