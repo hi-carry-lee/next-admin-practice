@@ -1,9 +1,12 @@
 import User from "../../ui/dashboard/user/user";
+import { fetchUsers } from "../../lib/data.js";
 
-function UsersPage() {
+async function UsersPage() {
+  const users = await fetchUsers();
+  console.log(users);
   return (
     <div>
-      <User />
+      <User users={users} />
     </div>
   );
 }
