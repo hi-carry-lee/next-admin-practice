@@ -5,12 +5,12 @@ import { fetchUsers } from "../../lib/data.js";
 // it can only used in the page component
 async function UsersPage({ searchParams }) {
   const search = searchParams?.search || "";
-
-  const users = await fetchUsers(search);
+  const page = searchParams?.page || 1;
+  const { users, count } = await fetchUsers(search, page);
 
   return (
     <div>
-      <User users={users} />
+      <User users={users} count={12} />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Pagination from "../pagination/pagination";
 
-function User({ users }) {
+function User({ users, count }) {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -62,7 +62,7 @@ function User({ users }) {
           ))}
         </tbody>
       </table>
-      <Pagination />
+      <Pagination count={count} />
     </div>
   );
 }

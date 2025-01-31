@@ -20,6 +20,7 @@ function Search({ placeholder }) {
     const inputValue = e.target.value.trim();
     if (inputValue) {
       inputValue.length > 2 && params.set("search", e.target.value.trim());
+      params.set("page", 1);
     } else {
       params.delete("search");
     }
