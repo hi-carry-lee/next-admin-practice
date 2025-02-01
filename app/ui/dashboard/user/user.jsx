@@ -3,6 +3,7 @@ import Search from "../search/search";
 import Link from "next/link";
 import Image from "next/image";
 import Pagination from "../pagination/pagination";
+import { deleteUser } from "../../../lib/actions";
 
 function User({ users, count }) {
   return (
@@ -50,7 +51,7 @@ function User({ users, count }) {
                       View
                     </button>
                   </Link>
-                  <form>
+                  <form action={deleteUser}>
                     <input type="hidden" name="id" value={user.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete

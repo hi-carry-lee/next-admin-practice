@@ -3,6 +3,7 @@ import Search from "../search/search";
 import Link from "next/link";
 import Image from "next/image";
 import Pagination from "../pagination/pagination";
+import { deleteProduct } from "../../../lib/actions";
 
 function Products({ products, count }) {
   return (
@@ -50,7 +51,7 @@ function Products({ products, count }) {
                       View
                     </button>
                   </Link>
-                  <form>
+                  <form action={deleteProduct}>
                     <input type="hidden" name="id" value={product.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete
