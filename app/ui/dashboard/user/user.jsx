@@ -5,7 +5,7 @@ import Image from "next/image";
 import Pagination from "../pagination/pagination";
 import { deleteUser } from "../../../lib/actions";
 
-function User({ users, count }) {
+function UserList({ users, count }) {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -68,7 +68,7 @@ function User({ users, count }) {
   );
 }
 
-export default User;
+export default UserList;
 // const users = [
 //   {
 //     id: 1,

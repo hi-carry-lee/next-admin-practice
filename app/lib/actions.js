@@ -31,6 +31,17 @@ export const addUser = async (formData) => {
   redirect("/dashboard/users");
 };
 
+export const fetchUserById = async (id) => {
+  try {
+    connectToDB();
+    const user = await User.findById(id);
+    return user;
+  } catch (error) {
+    console.log(error);
+    throw new Error("failed to fetch user!");
+  }
+};
+
 export const deleteUser = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
@@ -67,6 +78,17 @@ export const addProduct = async (formData) => {
   }
   revalidatePath("/dashboard/products");
   redirect("/dashboard/products");
+};
+
+export const fetchProductById = async (id) => {
+  try {
+    connectToDB();
+    const product = await Product.findById(id);
+    return product;
+  } catch (error) {
+    console.log(error);
+    throw new Error("failed to fetch product!");
+  }
 };
 
 export const deleteProduct = async (formData) => {

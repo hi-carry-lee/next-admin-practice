@@ -1,4 +1,4 @@
-import Products from "../../ui/dashboard/products/products.jsx";
+import ProductsList from "../../ui/dashboard/products/products.jsx";
 import { fetchProducts } from "../../lib/data.js";
 
 async function ProductsPage({ searchParams }) {
@@ -8,7 +8,7 @@ async function ProductsPage({ searchParams }) {
 
   return (
     <div>
-      <Products products={products} count={count} />
+      <ProductsList products={products} count={count} />
     </div>
   );
 }

@@ -18,6 +18,11 @@
   margin-bottom: 20px;
 }
 
+.productImage {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
 .formContainer {
   flex: 3;
 }

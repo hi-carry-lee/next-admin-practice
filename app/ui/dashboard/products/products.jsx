@@ -5,7 +5,7 @@ import Image from "next/image";
 import Pagination from "../pagination/pagination";
 import { deleteProduct } from "../../../lib/actions";
 
-function Products({ products, count }) {
+function ProductsList({ products, count }) {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -68,7 +68,7 @@ function Products({ products, count }) {
   );
 }
 
-export default Products;
+export default ProductsList;
 
 // const products = [
 //   {

@@ -1,4 +1,4 @@
-import User from "../../ui/dashboard/user/user";
+import UserList from "../../ui/dashboard/user/user";
 import { fetchUsers } from "../../lib/data.js";
 
 // searchParams is used to get the search query from the URL
@@ -10,7 +10,7 @@ async function UsersPage({ searchParams }) {
 
   return (
     <div>
-      <User users={users} count={count} />
+      <UserList users={users} count={count} />
     </div>
   );
 }
