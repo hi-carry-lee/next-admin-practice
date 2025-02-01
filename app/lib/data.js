@@ -19,6 +19,16 @@ export const fetchUsers = async (search, page) => {
   }
 };
 
+export const createUser = async (user) => {
+  try {
+    connectToDB();
+    await User.insert({ user });
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch users!");
+  }
+};
+
 export const fetchProducts = async (search, page) => {
   // create a regex to ignore case, and the regex can also be used as the search parameter of mongoose
   const regex = new RegExp(search, "i");
