@@ -10,7 +10,7 @@ async function UsersPage({ searchParams }) {
 
   return (
     <div>
-      <User users={users} count={12} />
+      <User users={users} count={count} />
     </div>
   );
 }
