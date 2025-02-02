@@ -7,7 +7,7 @@ import bcrypt from "bcrypt";
 
 // -------------------- USER --------------------
 export const addUser = async (formData) => {
-  const { username, email, password, phone, address } =
+  const { username, email, password, phone, address, isAdmin, isActive } =
     Object.fromEntries(formData);
 
   try {
@@ -21,6 +21,8 @@ export const addUser = async (formData) => {
       password: hashedPassword,
       phone,
       address,
+      isAdmin,
+      isActive,
     });
     await newUser.save();
   } catch (error) {
@@ -42,6 +44,42 @@ export const fetchUserById = async (id) => {
   }
 };
 
+export const updateUser = async (formData) => {
+  // default value also coule be used as the value
+  const { id, username, email, password, phone, address, isAdmin, isActive } =
+    Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+    const updatedFields = {
+      username,
+      email,
+      password,
+      phone,
+      address,
+      isAdmin,
+      isActive,
+    };
+
+    Object.keys(updatedFields).forEach(
+      (key) =>
+        (updatedFields[key] === "" || updatedFields[key] === undefined) &&
+        delete updatedFields[key]
+    );
+    if (Object.keys(updatedFields).length > 0) {
+      await User.findByIdAndUpdate(id, updatedFields);
+      revalidatePath("/dashboard/users");
+      console.log("execute update user....");
+    }
+    console.log("execute update user action....");
+    console.log("------------------------------");
+  } catch (error) {
+    console.log(error);
+    throw new Error("failed to update user!");
+  }
+  redirect("/dashboard/users");
+};
+
 export const deleteUser = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
@@ -57,7 +95,7 @@ export const deleteUser = async (formData) => {
 
 // ---------------- PRODUCT --------------------
 export const addProduct = async (formData) => {
-  const { title, desc, price, stock, color, size } =
+  const { title, cat, desc, price, stock, color, size } =
     Object.fromEntries(formData);
 
   try {
@@ -65,6 +103,7 @@ export const addProduct = async (formData) => {
 
     const newProduct = new Product({
       title,
+      cat,
       desc,
       price,
       stock,
@@ -89,6 +128,42 @@ export const fetchProductById = async (id) => {
     console.log(error);
     throw new Error("failed to fetch product!");
   }
+};
+
+export const updateProduct = async (formData) => {
+  // default value also coule be used as the value
+  const { id, title, cat, desc, price, stock, color, size } =
+    Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+    const updatedFields = {
+      title,
+      cat,
+      desc,
+      price,
+      stock,
+      color,
+      size,
+    };
+
+    Object.keys(updatedFields).forEach(
+      (key) =>
+        (updatedFields[key] === "" || updatedFields[key] === undefined) &&
+        delete updatedFields[key]
+    );
+    if (Object.keys(updatedFields).length > 0) {
+      await Product.findByIdAndUpdate(id, updatedFields);
+      revalidatePath("/dashboard/products");
+      console.log("execute update product....");
+    }
+    console.log("execute update product action....");
+    console.log("------------------------------");
+  } catch (error) {
+    console.log(error);
+    throw new Error("failed to update product!");
+  }
+  redirect("/dashboard/products");
 };
 
 export const deleteProduct = async (formData) => {

@@ -43,3 +43,36 @@
   border-radius: 5px;
   margin-bottom: 10px;
 }
+
+.form button {
+  padding: 20px;
+  background-color: teal;
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* in the detaile page, we display the value for every field with placeholder */
+/* but for select element, it doesn't have default value */
+/* and we want to have the same text color, so we change the color of placeholder text */
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--text) !important;
+  opacity: 1;
+}
+
+/* for compatibility */
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+  color: var(--text) !important;
+}
+
+.form input::-moz-placeholder,
+.form textarea::-moz-placeholder {
+  color: var(--text) !important;
+}
+
+.form input:-ms-input-placeholder {
+  color: var(--text) !important;
+}
