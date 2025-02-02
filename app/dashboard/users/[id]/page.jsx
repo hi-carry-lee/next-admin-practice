@@ -38,7 +38,7 @@ async function UserDetail({ params }) {
           <label htmlFor="password">Password</label>
           <input
             type="password"
-            placeholder={user.password}
+            placeholder={"············"}
             name="password"
             id="password"
           />

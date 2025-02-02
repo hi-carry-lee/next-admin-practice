@@ -66,6 +66,15 @@ export const updateUser = async (formData) => {
         (updatedFields[key] === "" || updatedFields[key] === undefined) &&
         delete updatedFields[key]
     );
+    if (
+      updatedFields["password"] !== "" &&
+      updatedFields["password"] !== undefined
+    ) {
+      const salt = await bcrypt.genSalt(10);
+      // 👉👉👉Important: Be careful with the parameter order
+      const hashedPassword = await bcrypt.hash(password, salt);
+      updatedFields["password"] = hashedPassword;
+    }
     if (Object.keys(updatedFields).length > 0) {
       await User.findByIdAndUpdate(id, updatedFields);
       revalidatePath("/dashboard/users");
