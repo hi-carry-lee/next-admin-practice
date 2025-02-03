@@ -1,6 +1,10 @@
 import ProductsList from "../../ui/dashboard/products/products.jsx";
 import { fetchProducts } from "../../lib/data.js";
 
+export const metadata = {
+  title: "products",
+};
+
 async function ProductsPage({ searchParams }) {
   const search = searchParams?.search || "";
   const page = searchParams?.page || 1;

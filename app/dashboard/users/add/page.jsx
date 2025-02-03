@@ -1,6 +1,10 @@
 import styles from "../../../ui/dashboard/user/addUser/addUser.module.css";
 import { addUser } from "../../../lib/actions";
 
+export const metadata = {
+  title: "add new user",
+};
+
 async function Add() {
   return (
     <div className={styles.container}>

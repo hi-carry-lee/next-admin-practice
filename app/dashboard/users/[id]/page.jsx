@@ -2,6 +2,10 @@ import styles from "../../../ui/dashboard/user/id/userDetail.module.css";
 import Image from "next/image";
 import { fetchUserById, updateUser } from "../../../lib/actions";
 
+export const metadata = {
+  title: "user detail",
+};
+
 async function UserDetail({ params }) {
   const { id } = params;
   const user = await fetchUserById(id);

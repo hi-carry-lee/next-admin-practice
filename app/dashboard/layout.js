@@ -3,6 +3,10 @@ import Navbar from "../ui/dashboard/navbar/navbar";
 import Footer from "../ui/dashboard/footer/footer";
 import styles from "../ui/dashboard/dashboard.module.css";
 
+export const metadata = {
+  title: "dashboard",
+};
+
 function Layout({ children }) {
   return (
     <div className={styles.container}>

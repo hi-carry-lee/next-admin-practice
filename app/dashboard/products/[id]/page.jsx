@@ -2,6 +2,10 @@ import { fetchProductById, updateProduct } from "../../../lib/actions";
 import styles from "../../../ui/dashboard/products/id/productDetail.module.css";
 import Image from "next/image";
 
+export const metadata = {
+  title: "product detail",
+};
+
 async function ProductDetail({ params }) {
   const { id } = params;
   const product = await fetchProductById(id);

@@ -1,6 +1,10 @@
 import { addProduct } from "../../../lib/actions.js";
 import styles from "../../../ui/dashboard/products/addProduct/addProduct.module.css";
 
+export const metadata = {
+  title: "add new product",
+};
+
 function Add() {
   return (
     <div className={styles.container}>
