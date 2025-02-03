@@ -2,7 +2,7 @@
 
 import styles from "./pagination.module.css";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { PAGE_COUNT } from "../../../lib/constants";
+import { PAGE_COUNT } from "../../../_lib/constants";
 
 function Pagination({ count }) {
   const searchParams = useSearchParams();

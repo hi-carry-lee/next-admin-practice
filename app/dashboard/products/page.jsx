@@ -1,5 +1,5 @@
-import ProductsList from "../../ui/dashboard/products/products.jsx";
-import { fetchProducts } from "../../lib/data.js";
+import ProductsList from "../../_ui/dashboard/products/products.jsx";
+import { fetchProducts } from "../../_lib/data.js";
 
 export const metadata = {
   title: "products",

@@ -1,5 +1,5 @@
-import { addProduct } from "../../../lib/actions.js";
-import styles from "../../../ui/dashboard/products/addProduct/addProduct.module.css";
+import { addProduct } from "../../../_lib/actions.js";
+import styles from "../../../_ui/dashboard/products/addProduct/addProduct.module.css";
 
 export const metadata = {
   title: "add new product",

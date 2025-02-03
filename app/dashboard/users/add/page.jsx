@@ -1,5 +1,5 @@
-import styles from "../../../ui/dashboard/user/addUser/addUser.module.css";
-import { addUser } from "../../../lib/actions";
+import styles from "../../../_ui/dashboard/user/addUser/addUser.module.css";
+import { addUser } from "../../../_lib/actions";
 
 export const metadata = {
   title: "add new user",

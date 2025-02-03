@@ -1,6 +1,6 @@
 import { Product, User } from "./models";
 import { connectToDB } from "./utils";
-import { PAGE_COUNT } from "../lib/constants";
+import { PAGE_COUNT } from "../_lib/constants";
 
 export const fetchUsers = async (search, page) => {
   // create a regex to ignore case, and the regex can also be used as the search parameter of mongoose

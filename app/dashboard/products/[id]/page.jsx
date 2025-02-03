@@ -1,5 +1,5 @@
-import { fetchProductById, updateProduct } from "../../../lib/actions";
-import styles from "../../../ui/dashboard/products/id/productDetail.module.css";
+import { fetchProductById, updateProduct } from "../../../_lib/actions";
+import styles from "../../../_ui/dashboard/products/id/productDetail.module.css";
 import Image from "next/image";
 
 export const metadata = {

@@ -1,5 +1,5 @@
-import UserList from "../../ui/dashboard/user/user";
-import { fetchUsers } from "../../lib/data.js";
+import UserList from "../../_ui/dashboard/user/user";
+import { fetchUsers } from "../../_lib/data.js";
 
 export const metadata = {
   title: "users",

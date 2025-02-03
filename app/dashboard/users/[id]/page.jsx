@@ -1,6 +1,6 @@
-import styles from "../../../ui/dashboard/user/id/userDetail.module.css";
+import styles from "../../../_ui/dashboard/user/id/userDetail.module.css";
 import Image from "next/image";
-import { fetchUserById, updateUser } from "../../../lib/actions";
+import { fetchUserById, updateUser } from "../../../_lib/actions";
 
 export const metadata = {
   title: "user detail",

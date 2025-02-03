@@ -3,7 +3,7 @@ import Search from "../search/search";
 import Link from "next/link";
 import Image from "next/image";
 import Pagination from "../pagination/pagination";
-import { deleteProduct } from "../../../lib/actions";
+import { deleteProduct } from "../../../_lib/actions";
 
 function ProductsList({ products, count }) {
   return (

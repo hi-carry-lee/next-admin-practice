@@ -3,7 +3,7 @@ import Search from "../search/search";
 import Link from "next/link";
 import Image from "next/image";
 import Pagination from "../pagination/pagination";
-import { deleteUser } from "../../../lib/actions";
+import { deleteUser } from "../../../_lib/actions";
 
 function UserList({ users, count }) {
   return (
